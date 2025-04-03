@@ -1,7 +1,10 @@
 import React from 'react';
 import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/Spotlight";
+import { TextGenerateEffect } from './ui/Text-generate-effect';
+import MagicButton from './ui/MagicButton';
 import { div } from 'motion/react-client';
+import { FaBeer, FaLocationArrow } from 'react-icons/fa';
 const Hero = () => {
   return (
     <div className='pb-40 pt-36'>
@@ -32,6 +35,20 @@ const Hero = () => {
         <div className='flex justify-center relative z-10 my-20'>
       <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center'>
         <h2 className='uppercase tracking-widest text-xs text-center max-w-80'>A full-stack web developer.</h2>
+        <TextGenerateEffect 
+        className='text-center text-[40px] md:text-5xl lg:text-6xl'
+        words='Hello Earth'
+        duration={1.7}
+        />
+        <p className='mb-2 text-md md:text-xl'>Hi I'm Eevee, a Full-Stack Web Developer</p>
+
+        <a href="/about">
+        <MagicButton
+        title="View my projects"
+        icon={<FaLocationArrow/>}
+        position='right'
+        />
+        </a>
         </div>
         </div>
 
