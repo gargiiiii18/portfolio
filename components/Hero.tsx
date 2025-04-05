@@ -38,7 +38,7 @@ const Hero = () => {
         <TextGenerateEffect 
         className='text-center text-[40px] md:text-5xl lg:text-6xl'
         words='Hello Earth'
-        duration={1.7}
+        duration={1}
         />
         <p className='mb-2 text-md md:text-xl'>Hi I'm Eevee, a Full-Stack Web Developer</p>
 
