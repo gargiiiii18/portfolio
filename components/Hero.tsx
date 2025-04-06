@@ -9,55 +9,54 @@ import Eevee from '../components/Eevee';
 const Hero = () => {
   return (
     <div className='pb-40 pt-36'>
-  
-    <div>
-        <Spotlight className='-top-10 -right-11 h-[80vh] w-[50vw]' fill="purple"/>
+
+      <div>
+        <Spotlight className='-top-10 -right-11 h-[80vh] w-[50vw]' fill="purple" />
         {/* <Spotlight className='md:-left-32 h-screen md:-top-20' fill="purple"/> */}
-        <Spotlight className='top-10 left-11 h-[80vh] w-[50vw]' fill="blue"/>
+        <Spotlight className='top-10 left-11 h-[80vh] w-[50vw]' fill="blue" />
         {/* <Spotlight className='top-28 left-80 h-[80vh] w-[50vw] md:-left-32 md:-top-20' fill="purple"/> */}
-        <Spotlight className='top-10 right-0 h-[80vh] w-[50vw]' fill="white"/>
-    </div>
-    <div>
-z
+        <Spotlight className='top-10 right-0 h-[80vh] w-[50vw]' fill="white" />
+      </div>
+      <div>
 
-    <div className="absolute top-0 left-0 flex flex-col md:flex-row justify-center md:h-screen w-screen items-center bg-white dark:bg-black-100">
-      <div
-        className={cn(
-          "absolute inset-0",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
-        )}
-      />
-    
+        <div className="absolute md:top-0 md:left-0 flex flex-col overflow-hidden md:flex-row justify-center md:h-screen w-screen items-center bg-white dark:bg-black-100">
+          <div
+            className={cn(
+              "absolute inset-0",
+              "[background-size:20px_20px]",
+              "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
+              "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
+            )}
+          />
 
-      {/* Radial gradient for the container to give a faded look */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100"/>
 
-        <div className='flex justify-center relative z-10 my-20'>
-      <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center'>
-        <h2 className='uppercase tracking-widest text-xs text-center max-w-80'>A full-stack web developer.</h2>
-        <TextGenerateEffect 
-        className='text-center text-[40px] md:text-5xl lg:text-6xl'
-        words='Hello Earth'
-        duration={1}
-        />
-        <p className='mb-2 text-md md:text-xl'>Hi I'm Eevee, a Full-Stack Web Developer</p>
+          {/* Radial gradient for the container to give a faded look */}
+          <div className="pointer-events-none absolute inset-0 flex  items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100" />
 
-        <a href="/about">
-        <MagicButton
-        title="View my projects"
-        icon={<FaLocationArrow/>}
-        position='right'
-        />
-        </a>
+          <div className='flex justify-center relative z-10 my-20'>
+            <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center'>
+              <h2 className='uppercase tracking-widest text-xs text-center max-w-80'>A full-stack web developer.</h2>
+              <TextGenerateEffect
+                className='text-center text-[40px] md:text-5xl lg:text-6xl'
+                words='Hello Earth'
+                duration={1}
+              />
+              <p className='mb-2 text-md md:text-xl'>I'm Eevee, a Full-Stack Web Developer</p>
+
+              <a href="/about">
+                <MagicButton
+                  title="View my projects"
+                  icon={<FaLocationArrow />}
+                  position='right'
+                />
+              </a>
+            </div>
+          </div>
+          <div className='relative -top-75 left-2 md:left-0 md:top-0'>
+            <Eevee />
+          </div>
         </div>
-        </div>
-        <div>
-        <Eevee/>
-        </div>
-    </div>
-    </div>
+      </div>
     </div>
   )
 }
