@@ -7,10 +7,11 @@ import { Bounds, OrbitControls } from '@react-three/drei';
 
 const Eevee = () => {
   return (
-    <div className='relative bottom-3 w-full h-screen'>
+    <div className='relative top-2 h-screen -left-3 w-100%'>
         <Canvas 
-        className='bg-transparent'
-        camera={{position: [1.2,3,8], fov: 70}}
+        className='bg-transparent overflow-hidden'
+        camera={{
+          position: [0, 1.5, 5], fov: 45}}
         >
             <Suspense fallback={<Loader/>}>
                 <directionalLight/>
@@ -18,10 +19,15 @@ const Eevee = () => {
                 <pointLight/>
                 <spotLight/>
                 <hemisphereLight/>
-              <OrbitControls/>
-              <Bounds fit observe margin={1}>
+              <OrbitControls
+              enableZoom={false}
+              // enableRotate={false}
+              // autoRotate
+              // autoRotateSpeed={6.5}
+              />
+              {/* <Bounds fit clip margin={1}> */}
                 <EeveeModel/>
-              </Bounds>
+              {/* </Bounds> */}
             </Suspense>
         </Canvas>
     </div>
