@@ -5,6 +5,7 @@ import { TextGenerateEffect } from './ui/Text-generate-effect';
 import MagicButton from './ui/MagicButton';
 import { div } from 'motion/react-client';
 import { FaBeer, FaLocationArrow } from 'react-icons/fa';
+import Eevee from '../components/Eevee';
 const Hero = () => {
   return (
     <div className='pb-40 pt-36'>
@@ -17,9 +18,9 @@ const Hero = () => {
         <Spotlight className='top-10 right-0 h-[80vh] w-[50vw]' fill="white"/>
     </div>
     <div>
+z
 
-
-    <div className="absolute top-0 left-0 flex justify-center h-screen w-screen items-center bg-white dark:bg-black-100">
+    <div className="absolute top-0 left-0 flex flex-col md:flex-row justify-center md:h-screen w-screen items-center bg-white dark:bg-black-100">
       <div
         className={cn(
           "absolute inset-0",
@@ -28,6 +29,7 @@ const Hero = () => {
           "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
         )}
       />
+    
 
       {/* Radial gradient for the container to give a faded look */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100"/>
@@ -51,7 +53,9 @@ const Hero = () => {
         </a>
         </div>
         </div>
-
+        <div>
+        <Eevee/>
+        </div>
     </div>
     </div>
     </div>
