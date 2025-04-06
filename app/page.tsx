@@ -2,13 +2,16 @@ import Image from "next/image";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/Floating-navbar";
 import { FaHome } from "react-icons/fa";
+import Eevee from "../components/Eevee";
 export default function Home() {
   return (
     <main className="relative bg-black-100 mx-auto flex  flex-col justify-center items-center overflow-hiddensm:px-10 px-5">
+        <Eevee/>
       <div className="max-w-7xl w-full">
       <FloatingNav navItems={[
         {name: 'Home', link: '/', icon: <FaHome/>}
       ]}/>
+    
       <Hero/>
       </div>
     </main>
