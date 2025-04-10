@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/Floating-navbar";
 import { FaHome } from "react-icons/fa";
-import Eevee from "../components/Eevee";
+import Grid from "@/components/Grid";
 export default function Home() {
   return (
     <main className="relative bg-black-100 mx-auto flex  flex-col justify-center items-center overflow-hiddensm:px-10 px-5">
@@ -12,6 +11,7 @@ export default function Home() {
       ]}/>
     
       <Hero/>
+      <Grid/>
       </div>
     </main>
   );
