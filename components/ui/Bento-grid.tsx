@@ -31,12 +31,11 @@ export const BentoGridItem = ({
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
-  id?: Number;
 }) => {
   return (
     <div
       className={cn(
-        "group/bento shadow-input row-span-1 relative flex flex-col justify-between space-y-4 rounded-2xl border  bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none border-red-600",
+        "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none",
         className,
       )}
     >
