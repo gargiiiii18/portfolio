@@ -20,7 +20,7 @@ const EeveeModel = (props) => {
 
   return (
     <group ref={eeveeRef} {...props}>
-      <group scale={isMobileScreenSize ? 0.018 : 0.028}>
+      <group scale={isMobileScreenSize ? 0.037 : 0.045}>
         <mesh
           geometry={nodes.Eevee_Material__12_0.geometry}
           material={materials.Material_12}
