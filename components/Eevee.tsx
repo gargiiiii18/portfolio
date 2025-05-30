@@ -7,9 +7,9 @@ import { Bounds, OrbitControls } from '@react-three/drei';
 
 const Eevee = () => {
   return (
-    <div className='relative z-0 top-2 h-[800px] md:h-screen -left-3 w-100%'>
+    <div className='relative z-0 top-65 md:top-2 h-[400px] md:-left-3 w-100%'>
         <Canvas 
-        className='bg-transparent overflow-hidden'
+        className='bg-transparent overflow-hidden z-50'
         camera={{
           position: [0, 1.5, 5], fov: 45}}
         >
