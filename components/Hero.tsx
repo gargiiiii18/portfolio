@@ -12,12 +12,13 @@ const Hero = () => {
     <div className=''>
 
       <div>
-        <Spotlight className='top-100 md:-top-10 md:-right-11 h-[80vh] w-[50vw]' fill="purple" />
+        <Spotlight className='right-40 md:-right-6 h-[80vh] w-[50vw]' fill="purple" />
         {/* <Spotlight className='md:-left-32 h-screen md:-top-20' fill="purple"/> */}
-        <Spotlight className='md:top-10 md:left-11 h-[80vh] w-[50vw]' fill="blue" />
+        <Spotlight className='top-5 md:top-30 md:left-11 h-[80vh] w-[50vw]' fill="blue" />
         {/* <Spotlight className='top-28 left-80 h-[80vh] w-[50vw] md:-left-32 md:-top-20' fill="purple"/> */}
-        <Spotlight className='md:top-10 md:right-0 h-[80vh] w-[50vw]' fill="white" />
+        <Spotlight className='top-0 md:top-5 left-2 md:left-20 right-0 h-[80vh] w-[50vw]' fill="white" />
       </div>
+    
       <div>
 
         <div className="md:top-0 top-50 md:left-0 flex flex-col justify-center overflow-hidden md:flex-row h-dvh w-screen items-center bg-white dark:bg-black-100">

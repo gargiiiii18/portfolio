@@ -13,9 +13,11 @@ import {
 } from "@tabler/icons-react";
 
 export function BentoGridDemo() {
+  
   return (
     <BentoGrid className="max-w-4xl mx-auto z-50">
       {gridItems.map(({title, description, img, id, className, spareImg, imgClassName, titleClassName}, i) => (
+        
         <BentoGridItem
           id={id}
           key={i}
@@ -24,7 +26,8 @@ export function BentoGridDemo() {
           img = {img}
           // header={item.header}
           // icon={item.icon}
-          className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+          className={id === 1 || id === 6 ? "md:col-span-2" : ""}
+          imgClassName={imgClassName}
           // className={className}
         />
       ))}
