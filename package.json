@@ -26,7 +26,8 @@
     "simplex-noise": "^4.0.3",
     "tailwind-merge": "^3.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.175.0"
+    "three": "^0.175.0",
+    "three-globe": "^2.42.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
