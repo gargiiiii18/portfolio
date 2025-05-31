@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "models/EeveeModel.jsx"
-  ],
+, "data/index.js"  ],
   "exclude": [
     "node_modules"
   ]
