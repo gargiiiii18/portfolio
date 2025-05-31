@@ -53,7 +53,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className='relative z-10 -top-65 left-2 md:left-0 md:top-0'>
+          <div className='relative md:z-10 -top-65 left-2 md:left-0 md:top-0'>
             <Eevee />
           </div>
          
