@@ -26,9 +26,9 @@ export function BentoGridDemo() {
           img = {img}
           // header={item.header}
           // icon={item.icon}
-          className={id === 1 || id === 6 ? "md:col-span-2" : ""}
+          // className={id === 1 || id === 6 ? "md:col-span-3 md:row-span-4" : ""}
           imgClassName={imgClassName}
-          // className={className}
+          className={className}
         />
       ))}
     </BentoGrid>
