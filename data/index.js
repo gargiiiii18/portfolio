@@ -25,11 +25,10 @@ export const gridItems = [
     title: "I prioritize client collaboration, fostering open communication ",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "rounded-xl h-65 w-full",
+    imgClassName: "w-full h-full",
+    titleClassName: "justify-end",
     img: "/b1.svg",
     spareImg: "",
-    header: <Skeleton />,
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
     id: 2,
@@ -40,8 +39,6 @@ export const gridItems = [
     titleClassName: "justify-start",
     img: "",
     spareImg: "",
-    header: <Skeleton />,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
     id: 3,
@@ -52,21 +49,16 @@ export const gridItems = [
     titleClassName: "justify-center",
     img: "",
     spareImg: "",
-    header: <Skeleton />,
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
     id: 4,
     title: "Tech enthusiast with a passion for development.",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-1",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
-    // img: "/b4.svg",
     img: "/grid.svg",
     spareImg: "/b4.svg",
-    header: <Skeleton />,
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
 
   {
@@ -74,12 +66,10 @@ export const gridItems = [
     title: "Currently building a JS Animation library",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName: "md:w-96 w-60",
+    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/b5.svg",
     spareImg: "/grid.svg",
-    header: <Skeleton />,
-    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
   },
   {
     id: 6,
@@ -90,8 +80,6 @@ export const gridItems = [
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",
     spareImg: "",
-    header: <Skeleton />,
-    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
   },
 ];
 
