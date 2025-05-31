@@ -9,7 +9,7 @@ import {BentoGridDemo}from "@/components/Grid";
 import Eevee from '../components/Eevee';
 const Hero = () => {
   return (
-    <div className=''>
+    <div className='overflow-hidden'>
 
       <div>
         <Spotlight className='right-40 md:-right-6 h-[80vh] w-[50vw]' fill="purple" />
@@ -44,7 +44,7 @@ const Hero = () => {
               />
               <p className='mx-2 text-md md:text-xl'>I'm Eevee, a Full-Stack Web Developer</p>
 
-              <a href="/about">
+              <a className='z-10' href="/about">
                 <MagicButton
                   title="View my projects"
                   icon={<FaLocationArrow />}
@@ -53,7 +53,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className='relative -top-65 left-2 md:left-0 md:top-0'>
+          <div className='relative z-10 -top-65 left-2 md:left-0 md:top-0'>
             <Eevee />
           </div>
          
