@@ -82,12 +82,19 @@ export const BentoGridItem = ({
         
           } */}
         
-        <div className={`${id==2 || id==5 ? "absolute" : ""}, "pl-4 top-4 font-sans text-sm md:text-xs lg:text-base z-10 text-neutral-500 font-extralight dark:text-neutral-300"`}>
+        <div className={`${(id==1 || id==2 || id==6) && "absolute"} pl-4 top-4 font-sans text-sm md:text-xs lg:text-base z-10 text-neutral-500 font-extralight dark:text-neutral-300`}>
           {description}
         </div>
-        <div className="absolute top-10 pl-4 mt-2 mb-2 font-sans font-normal lg:text-xl max-w-96 z-10 text-neutral-600 dark:text-neutral-200">
+        <div className={`${(id==1 || id==2 || id==6) && "absolute"} top-10 pl-4 mt-2 mb-2 font-sans font-normal lg:text-xl max-w-96 z-10 text-neutral-600 dark:text-neutral-200`}>
           {title}
         </div>
+
+        {/* <div className={`${id==2 || id==5 ? "absolute" : ""} pl-4 top-4 font-sans text-sm md:text-xs lg:text-base z-10 text-neutral-500 font-extralight dark:text-neutral-300`}>
+          {description}
+        </div>
+        <div className={`${id==2 || id==5 ? "absolute" : ""} top-10 pl-4 mt-2 mb-2 font-sans font-normal lg:text-xl max-w-96 z-10 text-neutral-600 dark:text-neutral-200`}>
+          {title}
+        </div> */}
 
          <div className="relative h-full w-full">
             <img 
