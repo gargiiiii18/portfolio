@@ -58,57 +58,55 @@ export const BentoGridItem = ({
       }}
     >
     
-      {/* <div className={cn(
-        id === 6 && "flex justify-center h-full"
-      )}>
-        <div className="absolute w-full h-full">
-            <img 
-            className={cn(
-              imgClassName, 'object-center', 'object-cover'
-            )}
-            src={img}
-            alt={spareImg} />
-        </div>
-      </div> */}
 
       {/* {header} */}
-       {id===6 ? (
+      
+      {/* {id===6 && 
           <div className="transition duration-200 group-hover/bento:translate-x-2">
             <BackgroundGradientAnimation gradientBackgroundStart="rgb(157, 78, 221)
 " gradientBackgroundEnd="rgb(0, 255, 255)" size="30%">
-              <div className="absolute z-50 flex h-55 w-full justify-center items-center text-white font-bold"/>
+              <div className="absolute z-50 flex h-full w-full justify-center items-center text-white font-bold"/>
             </BackgroundGradientAnimation>
           </div>
-        ) : (
+      }  */}
 
       <div className="relative overflow-hidden transition duration-200 group-hover/bento:translate-x-2">
 
-        {/* {icon} */}
+        {/* {id===6 && 
+          <div className="relative overflow-hidden transition duration-200 group-hover/bento:translate-x-2">
+            <BackgroundGradientAnimation gradientBackgroundStart="rgb(157, 78, 221)
+              " gradientBackgroundEnd="rgb(0, 255, 255)" size="20%">
+              <div className="absolute z-50 flex w-full justify-center items-center text-white font-bold"/>
+            </BackgroundGradientAnimation>
+          </div>
         
-        <div className="absolute top-0 font-sans text-sm md:text-xs lg:text-base z-10 text-neutral-500 font-extralight dark:text-neutral-300">
+          } */}
+        
+        <div className={`${id==2 || id==5 ? "absolute" : ""}, "pl-4 top-4 font-sans text-sm md:text-xs lg:text-base z-10 text-neutral-500 font-extralight dark:text-neutral-300"`}>
           {description}
         </div>
-        <div className="absolute top-5 mt-2 mb-2 font-sans font-normal lg:text-lg max-w-96 z-10 text-neutral-600 dark:text-neutral-200">
+        <div className="absolute top-10 pl-4 mt-2 mb-2 font-sans font-normal lg:text-xl max-w-96 z-10 text-neutral-600 dark:text-neutral-200">
           {title}
         </div>
 
-          {/* {id==2 && 
-            <GlobeDemo/>
-          } */}
-
-         <div className="h-full w-full">
+         <div className="relative h-full w-full">
             <img 
             className={cn(
               imgClassName, 'object-center', 'object-cover'
             )}
             src={img}
             alt={spareImg} />
-            
         </div>
+        {
+          id === 6 && (
+              <BackgroundGradientAnimation gradientBackgroundStart="rgb(157, 78, 221)" gradientBackgroundEnd="rgb(0, 255, 255)" size="20%">
+              <div className="absolute z-50 flex w-full justify-center items-center text-white font-bold"/>
+              </BackgroundGradientAnimation>
+          )  
+        }
        
       </div>
-        )
-      }
+       
     
     </div>
   );

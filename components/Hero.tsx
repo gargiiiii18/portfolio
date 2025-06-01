@@ -44,7 +44,7 @@ const Hero = () => {
               />
               <p className='mx-2 text-md md:text-xl'>I'm Eevee, a Full-Stack Web Developer</p>
 
-              <a className='z-10' href="/about">
+              <a className='' href="/about">
                 <MagicButton
                   title="View my projects"
                   icon={<FaLocationArrow />}
@@ -53,7 +53,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className='relative md:z-10 -top-65 left-2 md:left-0 md:top-0'>
+          <div className='relative -top-65 left-2 md:left-0 md:top-0'>
             <Eevee />
           </div>
          
