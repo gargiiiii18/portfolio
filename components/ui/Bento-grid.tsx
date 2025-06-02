@@ -59,18 +59,7 @@ export const BentoGridItem = ({
     >
     
 
-      {/* {header} */}
-      
-      {/* {id===6 && 
-          <div className="transition duration-200 group-hover/bento:translate-x-2">
-            <BackgroundGradientAnimation gradientBackgroundStart="rgb(157, 78, 221)
-" gradientBackgroundEnd="rgb(0, 255, 255)" size="30%">
-              <div className="absolute z-50 flex h-full w-full justify-center items-center text-white font-bold"/>
-            </BackgroundGradientAnimation>
-          </div>
-      }  */}
-
-      <div className="relative overflow-hidden transition duration-200 group-hover/bento:translate-x-2">
+      <div className="relative w-full transition duration-200 group-hover/bento:translate-x-2">
 
         {/* {id===6 && 
           <div className="relative overflow-hidden transition duration-200 group-hover/bento:translate-x-2">
@@ -95,8 +84,7 @@ export const BentoGridItem = ({
         <div className={`${id==2 || id==5 ? "absolute" : ""} top-10 pl-4 mt-2 mb-2 font-sans font-normal lg:text-xl max-w-96 z-10 text-neutral-600 dark:text-neutral-200`}>
           {title}
         </div> */}
-
-         <div className="relative h-full w-full">
+         <div className="flex relative h-full w-full">
             <img 
             className={cn(
               imgClassName, 'object-center', 'object-cover'
@@ -104,6 +92,47 @@ export const BentoGridItem = ({
             src={img}
             alt={spareImg} />
         </div>
+
+            {
+              id == 3 && (
+                <div className="flex p-2 gap-2 absolute -bottom-3 lg:-bottom-3 lg:-right-2 -right-3">
+                  <div className="flex flex-col gap-3">
+                      {['Next.js', 'React.js', 'Express'].map((item) => (
+                        <span key={item} className="py-2 px-3 text-xs lg:text-sm opacity-70 rounded-lg text-center bg-[#2a306a]">
+                          {item}
+                        </span>
+                      ))}
+                      <span className="py-4 px-3 bg-[#1c214f] opacity-70 rounded-lg"/>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                      <span className="py-4 px-3 bg-[#2a306a] opacity-70 rounded-lg"/>
+                      {['Next.js', 'React.js', 'Express'].map((item) => (
+                        <span key={item} className="py-2 px-3 text-xs lg:text-sm opacity-70 rounded-lg text-center bg-[#1c214f]">
+                          {item}
+                        </span>
+                      ))}
+                  </div>
+                  {/* <div className="flex flex-col gap-3">
+                      {['Next.js', 'React.js', 'Express'].map((item) => (
+                        <span key={item} className="py-2 px-3 text-xs lg:text-sm opacity-70 rounded-lg text-center bg-[#2a306a]">
+                          {item}
+                        </span>
+                      ))}
+                      <span className="py-4 px-3 bg-[#1c214f] opacity-70 rounded-lg"/>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                      <span className="py-4 px-3 bg-[#2a306a] opacity-70 rounded-lg"/>
+                      {['Next.js', 'React.js', 'Express'].map((item) => (
+                        <span key={item} className="py-2 px-3 text-xs lg:text-sm opacity-70 rounded-lg text-center bg-[#1c214f]">
+                          {item}
+                        </span>
+                      ))}
+                  </div> */}
+               
+                </div>
+              )
+            }
+
         {
           id === 6 && (
               <BackgroundGradientAnimation gradientBackgroundStart="rgb(157, 78, 221)" gradientBackgroundEnd="rgb(0, 255, 255)" size="20%">
