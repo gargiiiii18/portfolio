@@ -15,7 +15,7 @@ import {
 export function BentoGridDemo() {
   
   return (
-    <BentoGrid className="max-w-4xl  h-full mx-auto z-50">
+    <BentoGrid className="max-w-4xl h-full mx-auto z-20">
       {gridItems.map(({title, description, img, id, className, spareImg, imgClassName, titleClassName}, i) => (
         
         <BentoGridItem
