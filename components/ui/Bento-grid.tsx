@@ -57,7 +57,7 @@ export const BentoGridItem = ({
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('codereevee@@gmail.com');
+    navigator.clipboard.writeText('codereevee@gmail.com');
     setCopied(true);
   }
 
@@ -89,7 +89,7 @@ export const BentoGridItem = ({
         <div className={`${(id==1 || id==2 || id==6) && "absolute"} pl-4 top-4 font-sans text-sm md:text-xs lg:text-base z-10 text-neutral-500 font-extralight dark:text-neutral-300`}>
           {description}
         </div>
-        <div className={`${(id==1 || id==2 || id==6) && "absolute"} top-10 pl-4 mt-2 mb-2 font-sans font-normal lg:text-xl max-w-96 z-10 text-neutral-600 dark:text-neutral-200`}>
+        <div className={`${(id==1 || id==2 || id==6) && "absolute top-4"} top-10 pl-4 my-2 font-sans font-normal lg:text-xl max-w-116 z-10 text-neutral-600 dark:text-neutral-200`}>
           {title}
         </div>
          <div className="flex relative h-full w-full">
@@ -141,38 +141,43 @@ export const BentoGridItem = ({
               )
             }
 
-        {
+        {/* {
           id === 6 && (
               <BackgroundGradientAnimation>
-              <div className="absolute -bottom-5 z-10 flex w-full justify-center items-center text-white font-bold">
+              <div className="relative -bottom-5 z-10 flex w-full justify-center items-center text-white font-bold">
 
               </div>
               </BackgroundGradientAnimation>
           )  
-        }
+        } */}
 
 
         {
           id == 6 && (
-            <div className="mt-5 relative">
+
+            <BackgroundGradientAnimation>
+              <div className="relative -bottom-5 z-10 flex w-full justify-center items-center text-white font-bold">
+               <div className="mt-15 mb-5 relative">
                 <div className={`absolute z-20 -bottom-5`}>
                     <Lottie options={{
                       loop: copied,
                       autoplay: copied,
                       animationData,
                       rendererSettings: {
-                        preserveAspectRatio: 'xMidYMid slice'
+                      preserveAspectRatio: 'xMidYMid slice'
                       }
                     }}/>
                 </div>
                 <MagicButton
-                  // otherClasses="absolute"
-                  title={copied ? "Email Copied!" : "Copy Email"}
+                  otherClasses="z-20"
+                  title={copied ? "Email Copied!" : "Copy my Email"}
                   icon={<IoCopyOutline/>}
                   position="left"
                   handleClick={handleCopy}
                 />
             </div>
+              </div>
+              </BackgroundGradientAnimation>
           )
         }
        
