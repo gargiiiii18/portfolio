@@ -8,6 +8,7 @@ import animationData from "@/data/confetti.json";
 import { useState } from "react";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+import { TechStack } from "./TechStack";
 
 export const BentoGrid = ({
   className,
@@ -65,7 +66,7 @@ export const BentoGridItem = ({
     <div
       className={cn(
           className,
-        `group/bento relative shadow-input row-span-1 ${(id!=3 && id!=6) && "p-4"} justify-between space-y-4 rounded-2xl bg-white mx-8 md:mx-0 transition duration-200 hover:shadow-xl dark:border-white/[0.1] dark:bg-black dark:shadow-none border border-white/[0.1]`,
+        `group/bento relative shadow-input ${(id!=3 && 'row-span-1')} ${(id!=3 && id!=6) && "p-4"} justify-between space-y-4 rounded-2xl bg-white mx-8 md:mx-0 transition duration-200 hover:shadow-xl dark:border-white/[0.1] dark:bg-black dark:shadow-none border border-white/[0.1]`,
       )}
       style={{
         background: 'linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)',
@@ -103,8 +104,26 @@ export const BentoGridItem = ({
 
             {
               id == 3 && (
-                <div className={`flex p-2 gap-2 absolute -bottom-3 lg:-bottom-5 lg:-right-4 -right-3`}>
-                  <div className="flex flex-col gap-3">
+                // <div className={`flex p-2 gap-2 absolute -bottom-3 lg:-bottom-5 lg:-right-4 -right-3`}>
+                //   <div className="flex flex-col gap-3">
+                //       {['Next.js', 'React.js', 'Express'].map((item) => (
+                //         <span key={item} className="py-2 px-3 text-xs lg:text-sm opacity-70 rounded-lg text-center bg-[#2a306a]">
+                //           {item}
+                //         </span>
+                //       ))}
+                //       <span className="py-4 px-3 bg-[#1c214f] opacity-70 rounded-lg"/>
+                //   </div>
+                //   <div className="flex flex-col gap-3">
+                //       <span className="py-4 px-3 bg-[#2a306a] opacity-70 rounded-lg"/>
+                //       {['MongoDB', 'PostegreSQL', 'MySQL'].map((item) => (
+                //         <span key={item} className="py-2 px-3 text-xs lg:text-sm opacity-70 rounded-lg text-center bg-[#1c214f]">
+                //           {item}
+                //         </span>
+                //       ))}
+                //   </div>
+                      <TechStack/>
+
+                  /* <div className="flex flex-col gap-3">
                       {['Next.js', 'React.js', 'Express'].map((item) => (
                         <span key={item} className="py-2 px-3 text-xs lg:text-sm opacity-70 rounded-lg text-center bg-[#2a306a]">
                           {item}
@@ -114,42 +133,16 @@ export const BentoGridItem = ({
                   </div>
                   <div className="flex flex-col gap-3">
                       <span className="py-4 px-3 bg-[#2a306a] opacity-70 rounded-lg"/>
-                      {['MongoDB', 'PostegreSQL', 'MySQL'].map((item) => (
-                        <span key={item} className="py-2 px-3 text-xs lg:text-sm opacity-70 rounded-lg text-center bg-[#1c214f]">
-                          {item}
-                        </span>
-                      ))}
-                  </div>
-                  {/* <div className="flex flex-col gap-3">
-                      {['Next.js', 'React.js', 'Express'].map((item) => (
-                        <span key={item} className="py-2 px-3 text-xs lg:text-sm opacity-70 rounded-lg text-center bg-[#2a306a]">
-                          {item}
-                        </span>
-                      ))}
-                      <span className="py-4 px-3 bg-[#1c214f] opacity-70 rounded-lg"/>
-                  </div>
-                  <div className="flex flex-col gap-3">
-                      <span className="py-4 px-3 bg-[#2a306a] opacity-70 rounded-lg"/>
                       {['Next.js', 'React.js', 'Express'].map((item) => (
                         <span key={item} className="py-2 px-3 text-xs lg:text-sm opacity-70 rounded-lg text-center bg-[#1c214f]">
                           {item}
                         </span>
                       ))}
-                  </div> */}
+                  </div> */
                
-                </div>
+                /* </div> */
               )
             }
-
-        {/* {
-          id === 6 && (
-              <BackgroundGradientAnimation>
-              <div className="relative -bottom-5 z-10 flex w-full justify-center items-center text-white font-bold">
-
-              </div>
-              </BackgroundGradientAnimation>
-          )  
-        } */}
 
 
         {
