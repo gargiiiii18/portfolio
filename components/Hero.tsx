@@ -58,7 +58,7 @@ const Hero = () => {
           </div>
          
         </div>
-        <div>
+        <div id='about'>
          <BentoGridDemo/>
          </div>
       </div>
