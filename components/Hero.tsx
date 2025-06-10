@@ -21,7 +21,7 @@ const Hero = () => {
     
       <div>
 
-        <div className="md:top-0 top-50 md:left-0 flex flex-col justify-center overflow-hidden md:flex-row h-dvh w-screen items-center bg-white dark:bg-black-100">
+        <div className="md:top-0 top-50 md:left-0 flex flex-col justify-center overflow-hidden md:flex-row h-dvh w-screen items-center bg-black-100">
           <div
             className={cn(
               "[background-size:20px_20px]",
@@ -32,7 +32,7 @@ const Hero = () => {
 
 
           {/* Radial gradient for the container to give a faded look */}
-          <div className="pointer-events-none inset-0 flex mt-30 md:mt-0 items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100" />
+          <div className="pointer-events-none inset-0 flex mt-30 md:mt-0 items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] bg-black-100" />
 
           <div className='flex justify-center relative z-10 my-12'>
             <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center'>
@@ -44,7 +44,7 @@ const Hero = () => {
               />
               <p className='mx-2 text-md md:text-xl'>I'm Eevee, a Full-Stack Web Developer</p>
 
-              <a className='' href="/about">
+              <a className='' href="#projects">
                 <MagicButton
                   title="View my projects"
                   icon={<FaLocationArrow />}
