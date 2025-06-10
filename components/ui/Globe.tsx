@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
 import { useThree, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "@/data/globe.json";
+import { div } from "framer-motion/client";
 declare module "@react-three/fiber" {
   interface ThreeElements {
     threeGlobe: ThreeElements["mesh"] & {
@@ -16,7 +17,7 @@ declare module "@react-three/fiber" {
 extend({ ThreeGlobe: ThreeGlobe });
 
 const RING_PROPAGATION_SPEED = 3;
-const aspect = 1.2;
+
 const cameraZ = 300;
 
 type Position = {
@@ -248,14 +249,35 @@ export function WebGLRendererConfig() {
 }
 
 export function World(props: WorldProps) {
-  const containerRef = useRef<HTMLDivElement | null>(null);
   const { globeConfig } = props;
+  const[isMobileScreenSize, setIsMobileScreenSize] = useState(false);
   const scene = new Scene();
   scene.fog = new Fog(0xffffff, 400, 2000);
 
+    // useEffect(()=>{
+    //   const updateScreensize = () => {
+    //       setIsMobileScreenSize(window.innerWidth<768);
+    //   }
+    //   updateScreensize();
+    //   window.addEventListener("resize", updateScreensize);
+    //   return () => window.removeEventListener("resize", updateScreensize);
+    // }, []);
+
+    // const aspectRatio = containerRef.current?.clientWidth / containerRef.current?.clientHeight;
+    // // const aspectRatio = isMobileScreenSize ? 0.95 : window.innerWidth / window.innerHeight;
+    // console.log(containerRef.current?.clientWidth);
+    // console.log(containerRef.current?.clientHeight);
+
+    const containerRef = useRef<HTMLDivElement | null>(null);
+
+    const width = containerRef.current?.clientWidth;
+    const height = containerRef.current?.clientHeight;
+    const aspect = width/height;
+    
 
   return (
-    <Canvas scene={scene} camera={new PerspectiveCamera(50, window.innerWidth / window.innerHeight, 180, 1800)}>
+    <div ref={containerRef} className="relative w-full h-full">
+    <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
       <WebGLRendererConfig />
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
       <directionalLight
@@ -283,6 +305,7 @@ export function World(props: WorldProps) {
         maxPolarAngle={Math.PI - Math.PI / 3}
       />
     </Canvas>
+    </div>
   );
 }
 
