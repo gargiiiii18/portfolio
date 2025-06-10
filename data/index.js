@@ -13,6 +13,7 @@ const Skeleton = () => (
 );
 
 export const navItems = [
+  { name: "Home", link: "/" },
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Contact", link: "#contact" },
@@ -47,8 +48,8 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
-    // img: "/b4.svg",
-    img: "",
+    img: "/b4.svg",
+    // img: "",
     spareImg: "",
   },
   {
@@ -219,14 +220,17 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
+    title: "Git",
     img: "/git.svg",
   },
   {
     id: 2,
+    title: "X.com",
     img: "/twit.svg",
   },
   {
     id: 3,
+    title: "Linkedin",
     img: "/link.svg",
   },
 ];
