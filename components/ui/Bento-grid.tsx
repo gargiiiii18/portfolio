@@ -66,7 +66,7 @@ export const BentoGridItem = ({
     <div
       className={cn(
           className,
-        `group/bento relative shadow-input ${(id!=3 && 'row-span-1')} ${(id!=3 && id!=6) && "p-4"} justify-between space-y-4 rounded-2xl bg-white mx-8 md:mx-0 transition duration-200 hover:shadow-xl dark:border-white/[0.1] dark:bg-black dark:shadow-none border border-white/[0.1]`,
+        `group/bento relative shadow-input ${(id!=3 && 'row-span-1')} ${(id!=3 && id!=6) && "p-4"} justify-between space-y-4 rounded-2xl mx-8 md:mx-0 transition duration-200 hover:shadow-xl border-white/[0.1] bg-black shadow-none border`,
       )}
       style={{
         background: 'linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)',
@@ -87,10 +87,10 @@ export const BentoGridItem = ({
         
           } */}
         
-        <div className={`${(id==1 || id==2 || id==6) && "absolute"} pl-4 top-4 font-sans text-sm md:text-xs lg:text-base z-10 text-neutral-500 font-extralight dark:text-neutral-300`}>
+        <div className={`${(id==1 || id==2 || id==6) && "absolute"} pl-4 top-4 font-sans text-sm md:text-xs lg:text-base z-10 font-extralight text-neutral-300`}>
           {description}
         </div>
-        <div className={`${(id==1 || id==2 || id==6) && "absolute top-4"} top-10 pl-4 my-2 font-sans font-normal lg:text-xl max-w-116 z-10 text-neutral-600 dark:text-neutral-200`}>
+        <div className={`${(id==1 || id==2 || id==6) && "absolute top-4"} top-10 pl-4 my-2 font-sans font-normal lg:text-xl max-w-116 z-10 text-neutral-200`}>
           {title}
         </div>
          <div className="flex relative h-full w-full">
