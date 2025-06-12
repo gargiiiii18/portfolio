@@ -9,7 +9,7 @@ import {
 } from "@tabler/icons-react";
 
 const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-800"></div>
 );
 
 export const navItems = [
@@ -19,54 +19,125 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
+export const technologiesImgs = [
+  {
+    id: 1,
+    title: "C",
+    imgClassName: "",
+    img: "/c1.svg",
+  },
+  {
+    id: 2,
+    title: "java",
+    imgClassName: "",
+    img: "/java.svg",
+  },
+  {
+    id: 3,
+    title: "python",
+    imgClassName: "",
+    img: "/python.svg",
+  },
+  {
+    id: 4,
+    title: "aws",
+    imgClassName: "",
+    img: "/aws.svg",
+  },
+  {
+    id: 5,
+    title: "docker",
+    imgClassName: "",
+    img: "/docker.svg",
+  },
+  {
+    id: 6,
+    title: "git",
+    imgClassName: "",
+    img: "/git1.svg",
+  },
+  {
+    id: 7,
+    title: "github",
+    imgClassName: "",
+    img: "/github.svg",
+  },
+  {
+    id: 8,
+    title: "streamlit",
+    imgClassName: "",
+    img: "/streamlit.svg",
+  },
+  {
+    id: 9,
+    title: "tensorflow",
+    imgClassName: "",
+    img: "/tensorflow.svg",
+  },
+  {
+    id: 10,
+    title: "django",
+    imgClassName: "",
+    img: "/django.svg",
+  },
+  {
+    id: 11,
+    title: "figma",
+    imgClassName: "",
+    img: "/figma.svg",
+  },
+];
+
 export const gridItems = [
   {
     id: 1,
-    title: "BTech. in Computer Science & Engineering (Internet of Things, Cybersecurity and Blockchain Technology)",
+    title: "BTech. in Computer Science & Engineering (Internet of Things, Cybersecurity and Blockchain Technology) with Honours in Smart Computing",
     description: "I am a Final Year student pursuing",
+    desc2: "At Dwarkadas J. Sanghvi College Of Engineering",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/grid.svg",
     spareImg: "",
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "hehee",
+    title: "Full-Stack Web Developer",
+    description: "I'm an aspiring",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "/b5.svg",
+    img: "/pikachu.webp",
     spareImg: "",
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
+    title: "Tech stack",
+    description: "My Dev",
     // description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
-    img: "/b4.svg",
-    // img: "",
+    // img: "/b4.svg",
+    img: "/grid.svg",
     spareImg: "",
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
+    title: "All these Technologies",
+    description: "I'm Familiar With",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
+    // img: "",
     spareImg: "/b4.svg",
   },
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
+    title: "DSA & AI/ML Skills",
+    description: "I'm currently sharpening my",
     className: "md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -222,15 +293,18 @@ export const socialMedia = [
     id: 1,
     title: "Git",
     img: "/git.svg",
+    link: "https://github.com/gargiiiii18",
   },
   {
     id: 2,
     title: "X.com",
-    img: "/twit.svg",
+    img: "/x.svg",
+    link: "https://x.com/Gargi_s_",
   },
   {
     id: 3,
     title: "Linkedin",
     img: "/link.svg",
+    link: "https://linkedin.com/in/gargi-sukhatankar-b550b726a",
   },
 ];
