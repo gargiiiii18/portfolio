@@ -19,7 +19,7 @@ export const Footer = () => {
           <h1 className='heading text-center font-bold text-2xl lg:text-4xl'>Connect {' '}
             <span className='text-purple-300 font-bold'>With Me</span>
             </h1>
-            <p className='max-w-60 md:max-w-96 text-sm md:text-lg text-white-200 text-center md:mt-15 mt-10 mb-5'>If you found my work interesting and would like to have a chat, Ping me!</p>
+            <p className='max-w-60 md:max-w-96 text-sm md:text-lg text-white-200 text-center md:mt-15 mt-10 mb-5'>If you found my work interesting and would like to have a chat, Ping me through a mail or connect through my socials</p>
             <a href="mailto:codereevee@gmail.com">
               <MagicButton
                 otherClasses="z-20"
