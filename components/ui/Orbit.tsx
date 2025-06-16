@@ -1,7 +1,7 @@
 "use client";
 import { technologiesImgs } from '@/data/index';
 import { div } from 'framer-motion/client';
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { SourceTextModule } from 'vm';
 
 type icons = {
@@ -12,23 +12,36 @@ type icons = {
 }
 
 export const Orbit = ({
-    radius=100
+    radius
     } : {
     technologiesImgs?:icons;
     radius?:number;
 }) => {
 
+    const[isMobile, setIsMobile] = useState(false);
+
     const centerClass = "absolute top-1/2 left-1/2";
+
+    
+    useEffect(()=>{
+    const updateScreensize = () => {
+        setIsMobile(window.innerWidth<768);
+        }
+    updateScreensize();
+    window.addEventListener("resize", updateScreensize);
+      }, []);
+
+      const adjustedRadius = radius ?? (isMobile ? 70 : 100);
 
   return (
     <div className='flex justify-center items-center'>
-    <div className='relative md:mr-8 mx-auto h-[300px] w-[300px]'>
+    <div className='absolute -top-10 -right-4 md:top-12 md:mr-9 mx-auto h-[300px] w-[300px]'>
         {technologiesImgs.map(({id, title, imgClassName, img}, index) => {
             // console.log(index);
             
             const angle = (2 * Math.PI / technologiesImgs.length) * index;
-            const x = (radius * Math.cos(angle));
-            const y = (radius * Math.sin(angle));
+            const x = (adjustedRadius * Math.cos(angle));
+            const y = (adjustedRadius * Math.sin(angle));
         
             return(
                 <div 

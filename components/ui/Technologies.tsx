@@ -1,7 +1,6 @@
 import React from 'react'
 import {technologiesImgs } from '@/data/index';
 import { cn } from "@/lib/utils";
-import { transform } from 'next/dist/build/swc/generated-native';
 
 export const Technologies = ({
     id,
@@ -15,7 +14,7 @@ export const Technologies = ({
      imgClassName?: string; 
 }) => {
   return (
-    <div className='absolute top-20 flex flex-wrap '>
+    <div className='arelative flex flex-wrap '>
         {technologiesImgs.map(({id, title, img, imgClassName}, index)=> (
             <div key={id} className='backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black rounded-full border border-gray-700 flex justify-center items-center p-2' style={{transform: `translateX(-${10*index}px)`}}>
             <img src={img} height={10} alt={title} className={cn(imgClassName,
