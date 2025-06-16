@@ -31,11 +31,11 @@ export const Orbit = ({
     window.addEventListener("resize", updateScreensize);
       }, []);
 
-      const adjustedRadius = radius ?? (isMobile ? 70 : 100);
+      const adjustedRadius = radius ?? (isMobile ? 70 : 90);
 
   return (
     <div className='flex justify-center items-center'>
-    <div className='absolute -top-10 -right-4 md:top-12 md:mr-9 mx-auto h-[300px] w-[300px]'>
+    <div className='absolute -top-6 -right-10 md:-right-6 md:-top-11 md:mr-4 mx-auto h-[300px] w-[300px]'>
         {technologiesImgs.map(({id, title, imgClassName, img}, index) => {
             // console.log(index);
             
@@ -51,7 +51,7 @@ export const Orbit = ({
                      transform: `translate(${x}px, ${y}px)`
                 }}
                 >
-                    <img src={img} alt={title} width={32} height={32} className='w-8 h-8 hover:scale-125 transition-transform duration-300'/>
+                    <img src={img} alt={title} width={32} height={32} className='w-8 h-8 md:hover:scale-165 hover:scale-135 transition-transform duration-200'/>
                 </div>
             )
 })}

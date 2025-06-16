@@ -11,6 +11,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import { TechStack } from "./TechStack";
 import { Technologies } from "./Technologies";
 import { Orbit } from "./Orbit";
+import { Snake } from "./Snake";
 
 export const BentoGrid = ({
   className,
@@ -79,7 +80,7 @@ export const BentoGridItem = ({
     >
     
 
-      <div className={`relative w-full ${(id==1 || id==3) && "md:h-full"} ${(id!=4) && "overflow-hidden"} transition duration-200 group-hover/bento:translate-x-2`}>
+      <div className={`relative w-full ${(id==1 || id==3) && "md:h-full"} ${(id!=5) && "overflow-hidden"} transition duration-200 group-hover/bento:translate-x-2`}>
         <div className={`${(id==1 || id==2 || id==6) && "absolute"} ${id==3 && "md:absolute left-4"} pl-4 top-4 font-sans text-sm md:text-xs lg:text-base z-10 font-extralight text-neutral-300`}>
           {description}
         </div>
@@ -91,7 +92,7 @@ export const BentoGridItem = ({
           {desc2}
         </div>
         )}
-         <div className={`flex ${id==3 && "absolute top-5"} ${id==3 && "md:absolute"} relative h-full w-full`}>
+         <div className={`flex ${id==5 && "justify-end"} ${id==3 && "absolute top-5"} ${id==3 && "md:absolute"} relative h-full w-full`}>
             <img 
             className={cn(
               imgClassName, 'object-center', 'object-cover'
@@ -111,6 +112,16 @@ export const BentoGridItem = ({
               id == 4 && (
 
                       //  <TechnologiesImgs/> 
+                      // <Orbit/>
+                      <Snake/>
+
+              )
+            }
+            {
+              id == 5 && (
+
+                      //  <TechnologiesImgs/> 
+                      // <Snake/>
                       <Orbit/>
 
               )
