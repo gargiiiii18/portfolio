@@ -15,8 +15,8 @@ const EeveeModel = (props) => {
     }
     updateScreensize();
     window.addEventListener("resize", updateScreensize);
-    return () => window.removeEventListener(resizeBy, updateScreensize);
-  }, [isMobileScreenSize]);
+    return () => window.removeEventListener("resize", updateScreensize);
+  }, []);
 
   return (
     <group ref={eeveeRef} {...props}>
