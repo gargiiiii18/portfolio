@@ -31,11 +31,11 @@ export const Orbit = ({
     window.addEventListener("resize", updateScreensize);
       }, []);
 
-      const adjustedRadius = radius ?? (isMobile ? 70 : 90);
+      const adjustedRadius = radius ?? (isMobile ? 60 : 90);
 
   return (
     <div className='flex justify-center items-center'>
-    <div className='absolute -top-6 -right-10 md:-right-6 md:-top-11 md:mr-4 mx-auto h-[300px] w-[300px]'>
+    <div className='absolute -top-21 -right-13 sm:-top-19 sm:-right-8 md:-right-5 md:-top-5 md:mr-4 mx-auto h-[300px] w-[300px]'>
         {technologiesImgs.map(({id, title, imgClassName, img}, index) => {
             // console.log(index);
             
