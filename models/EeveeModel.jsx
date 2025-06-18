@@ -1,21 +1,14 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
+import { isMobileHook } from '@/hooks/isMobileHook';
 
 const EeveeModel = (props) => {
 
-  const [isMobileScreenSize, setIsMobileScreenSize] = useState(false);
+  const isMobileScreenSize = isMobileHook();
   const { nodes, materials } = useGLTF('/eevee.glb');
   const eeveeRef = useRef();
 
-  useEffect(()=>{
-    const updateScreensize = () => {
-        setIsMobileScreenSize(window.innerWidth<768);
-    }
-    updateScreensize();
-    window.addEventListener("resize", updateScreensize);
-    return () => window.removeEventListener("resize", updateScreensize);
-  }, []);
 
   return (
     <group ref={eeveeRef} {...props}>
