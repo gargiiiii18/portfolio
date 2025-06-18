@@ -1,0 +1,52 @@
+"use client";
+import React, { useEffect, useRef, useState } from 'react';
+import { Billboard, OrbitControls, Text, RoundedBox } from '@react-three/drei';
+import "@fontsource/ibm-plex-mono";
+
+export const ChatBubble = ({
+    position
+}:{
+    position?:[number, number, number]
+}) => {
+
+    const fullText = "Eevee says Hi !";
+    const[displayText, setDisplayText] = useState("");
+    const indexRef = useRef(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if(indexRef.current < fullText.length){
+                const currentChar = fullText[indexRef.current]
+                setDisplayText(prev => (prev + currentChar)); 
+                indexRef.current+=1;
+                console.log(indexRef.current);
+            }
+            else {
+                clearInterval(interval);
+            }
+        }, 170);
+
+        return () => clearInterval(interval);
+    }, [])
+  return (
+    <Billboard follow position={position}>
+        <OrbitControls
+        enableRotate={false}
+        enableZoom={false}
+        />
+        
+        <Text
+            font="/fonts/IBMPlexMono-Medium.ttf"
+            fontSize={0.13}
+            color='white'
+            anchorX='center'
+            anchorY='middle'
+            outlineWidth={0.01}
+            outlineColor='black'
+        >
+         {displayText}
+        </Text>
+    </Billboard>
+
+  )
+}

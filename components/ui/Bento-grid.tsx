@@ -59,7 +59,7 @@ export const BentoGridItem = ({
   const [copied, setCopied] = useState(false);
   const[isMobile, setIsMobile] = useState(false);
 
-   useEffect(()=>{
+    useEffect(()=>{
       const updateScreensize = () => {
           setIsMobile(window.innerWidth<768);
           }
@@ -69,10 +69,12 @@ export const BentoGridItem = ({
       return () => window.removeEventListener("resize", updateScreensize);
         }, []);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText('codereevee@gmail.com');
-    setCopied(true);
-  }
+
+        const handleCopy = () => {
+        navigator.clipboard.writeText('codereevee@gmail.com');
+        setCopied(true);
+      }
+
 
   return (
     <div
@@ -121,8 +123,6 @@ export const BentoGridItem = ({
             {
               id == 4 && (
 
-                      //  <TechnologiesImgs/> 
-                      // <Orbit/>
                       <Snake/>
 
               )
