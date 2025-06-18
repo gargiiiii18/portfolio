@@ -90,13 +90,13 @@ export const BentoGridItem = ({
     
 
       <div className={`relative w-full ${(id==1 || id==3) && "md:h-full"} ${(id!=5) && "overflow-hidden"} transition duration-200 group-hover/bento:translate-x-2`}>
-        <div className={`${(id!=3 && id!=4) && "absolute"} ${id==3 && "absolute left-4"} ${id==4 && 'mt-4'} pl-4 top-4 font-sans text-sm md:text-xs lg:text-base z-10 font-extralight text-neutral-300`}>
+        <div className={` ${(id!=3 && id!=4) && "absolute"} ${id==3 && "absolute left-4"} ${id==4 && 'mt-4'} pl-4 top-4 font-sans text-sm md:text-xs lg:text-base z-10 font-extralight text-neutral-300`}>
           {description}
         </div>
-        <div className={`${(id!=3 && id!=4) && "absolute -top-4"} ${id==3 && "absolute left-4"} ${id==4 && "mb-5"} ${id==6 && ""} top-10 pl-4 my-2 font-sans font-normal lg:text-xl max-w-116 z-10 text-neutral-200`}>
+        <div className={`${id==2 && "md:w-40"} ${(id!=3 && id!=4) && "absolute -top-4"} ${id==3 && "absolute left-4"} ${id==4 && "mb-5"} ${id==6 && ""} top-10 pl-4 my-2 font-sans font-normal lg:text-xl max-w-116 z-10 text-neutral-200`}>
           {title}
           {id == 4 && (
-            <a className="text-purple-300 font-normal" href="https://github.com/gargiiiii18" target="blank">Github</a>
+            <a className="text-purple-300 font-normal underline underline-offset-3" href="https://github.com/gargiiiii18" target="blank">Github</a>
           )}
         </div>
         {id==1 && (
@@ -104,7 +104,7 @@ export const BentoGridItem = ({
           {desc2}
         </div>
         )}
-         <div className={`flex ${id==5 && "justify-end"} ${id==3 && "absolute"} relative h-full w-full`}>
+         <div className={`flex ${id==5 || id==2 && "justify-end"} ${id==3 && "absolute"} relative h-full w-full`}>
             <img 
             className={cn(
               imgClassName, 'object-center', 'object-cover'

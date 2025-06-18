@@ -27,7 +27,7 @@ export const ChatBubble = ({
                 clearInterval(interval);
                 setTimeout(() => {
                     setDisplayText("");
-                }, 2500);
+                }, 2800);
             }
         }, 170);
 
