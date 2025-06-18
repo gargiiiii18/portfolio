@@ -1,13 +1,3 @@
-import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
-
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-800"></div>
 );
@@ -91,14 +81,13 @@ export const technologiesImgs = [
 export const gridItems = [
   {
     id: 1,
-    title: "BTech. in Computer Science & Engineering (Internet of Things, Cybersecurity and Blockchain Technology) with Honours in Smart Computing",
+    title: "BTech. in Computer Science & Engineering (Internet of Things, Cybersecurity and Blockchain Technology)",
     description: "I am a Final Year student pursuing",
     desc2: "At Dwarkadas J. Sanghvi College Of Engineering",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/grid.svg",
-    // img: "/pikachu.webp",
     spareImg: "",
   },
   {
@@ -106,16 +95,15 @@ export const gridItems = [
     title: "Full-Stack Web Developer",
     description: "I'm an aspiring",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/b1.svg",
+    imgClassName: "flex justify-end",
+    titleClassName: "justify-start w-23",
+    img: "/web-development.svg",
     spareImg: "",
   },
   {
     id: 3,
     title: "Tech Stack",
     description: "My Development",
-    // description: "",
     className: "md:col-span-3 md:row-span-2 row-span-1",
     imgClassName: "h-[155px]",
     titleClassName: "justify-center",
@@ -123,26 +111,12 @@ export const gridItems = [
     img: "/grid.svg",
     spareImg: "",
   },
-  // {
-  //   id: 4,
-  //   title: "All these Technologies",
-  //   description: "I'm Familiar With",
-  //   className: "lg:col-span-2 md:col-span-6 md:row-span-4 row-span-2",
-  //   imgClassName: "",
-  //   titleClassName: "justify-start",
-  //   img: "/grid.svg"
-  //   // img: "",
-  //   spareImg: "/b4.svg",
-  // },
-
   {
     id: 4,
     title: "Visit my ",
-    // description: `Visit my `,
     className: "md:col-span-6 md:row-span-1",
     imgClassName: "float right",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    // img: "/icons8-java-96.svg",
     img: "",
     spareImg: "/grid.svg",
   },
@@ -154,7 +128,6 @@ export const gridItems = [
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
-    // img: "",
     spareImg: "/b4.svg",
   },
   {
@@ -196,102 +169,6 @@ export const projects = [
   },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-];
-
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
-];
-
-export const workExperience = [
-  {
-    id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
-  },
-  {
-    id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
-];
 
 export const socialMedia = [
   {
