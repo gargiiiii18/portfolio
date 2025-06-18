@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
-import { useFrame, useThree } from '@react-three/fiber';
 
 const EeveeModel = (props) => {
 
