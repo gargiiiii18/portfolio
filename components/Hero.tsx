@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { TextGenerateEffect } from './ui/text-generate-effect';
 import MagicButton from './ui/MagicButton';
-import { FaBeer, FaLocationArrow } from 'react-icons/fa';
+import {FaLocationArrow } from 'react-icons/fa';
 import {BentoGridDemo}from "@/components/Grid";
 import Eevee from '../components/Eevee';
 const Hero = () => {
@@ -33,13 +33,13 @@ const Hero = () => {
 
           <div className='flex justify-center relative z-10 my-12'>
             <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center'>
-              <h2 className='uppercase tracking-widest text-xs text-center max-w-80'>My Dev Portfolio</h2>
+              <h2 className='uppercase tracking-widest text-xs text-center max-w-80'>Welcome to my Portfolio</h2>
               <TextGenerateEffect
                 className='text-center text-[40px] md:text-5xl lg:text-6xl'
                 words='Hello Earth'
                 duration={1}
               />
-              <p className='mx-2 text-md md:text-xl'>I'm Eevee, a Full-Stack Web Developer</p>
+              <p className='mx-2 text-md md:text-xl'>I'm a Full-Stack Web Developer</p>
 
               <a className='' href="#projects">
                 <MagicButton
