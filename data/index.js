@@ -107,7 +107,6 @@ export const gridItems = [
     className: "md:col-span-3 md:row-span-2 row-span-1",
     imgClassName: "h-[155px]",
     titleClassName: "justify-center",
-    // img: "/b4.svg",
     img: "/grid.svg",
     spareImg: "",
   },
@@ -185,6 +184,12 @@ export const socialMedia = [
   },
   {
     id: 3,
+    title: "Instagram",
+    img: "/instagram.svg",
+    link: "https://www.instagram.com/gargiiiii_18/",
+  },
+  {
+    id: 4,
     title: "Linkedin",
     img: "/link.svg",
     link: "https://linkedin.com/in/gargi-sukhatankar-b550b726a",
