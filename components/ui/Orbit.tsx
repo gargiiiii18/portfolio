@@ -3,6 +3,7 @@ import { technologiesImgs } from '@/data/index';
 import { div } from 'framer-motion/client';
 import React, { useState, useEffect } from 'react'
 import { SourceTextModule } from 'vm';
+import { isMobileHook } from '@/hooks/isMobileHook';
 
 type icons = {
     id?:number; 
@@ -18,20 +19,11 @@ export const Orbit = ({
     radius?:number;
 }) => {
 
-    const[isMobile, setIsMobile] = useState(false);
+    const isMobile = isMobileHook();
 
     const centerClass = "absolute top-1/2 left-1/2";
 
-    
-    useEffect(()=>{
-    const updateScreensize = () => {
-        setIsMobile(window.innerWidth<768);
-        }
-    updateScreensize();
-    window.addEventListener("resize", updateScreensize);
-      }, []);
-
-      const adjustedRadius = radius ?? (isMobile ? 60 : 90);
+    const adjustedRadius = radius ?? (isMobile ? 60 : 90);
 
   return (
     <div className='flex justify-center items-center'>

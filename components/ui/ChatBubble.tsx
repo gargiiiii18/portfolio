@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Billboard, OrbitControls, Text, RoundedBox } from '@react-three/drei';
 import "@fontsource/ibm-plex-mono";
+import { isMobileHook } from '@/hooks/isMobileHook';
 
 export const ChatBubble = ({
     position
@@ -9,9 +10,10 @@ export const ChatBubble = ({
     position?:[number, number, number]
 }) => {
 
-    const fullText = "Eevee says Hi !";
+    const fullText = "Eevee says Hi!";
     const[displayText, setDisplayText] = useState("");
     const indexRef = useRef(0);
+    const isMobile = isMobileHook();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -23,11 +25,15 @@ export const ChatBubble = ({
             }
             else {
                 clearInterval(interval);
+                setTimeout(() => {
+                    setDisplayText("");
+                }, 2500);
             }
         }, 170);
 
         return () => clearInterval(interval);
-    }, [])
+    }, []);
+
   return (
     <Billboard follow position={position}>
         <OrbitControls
@@ -37,7 +43,7 @@ export const ChatBubble = ({
         
         <Text
             font="/fonts/IBMPlexMono-Medium.ttf"
-            fontSize={0.13}
+            fontSize={isMobile ? 0.09 : 0.12}
             color='white'
             anchorX='center'
             anchorY='middle'
