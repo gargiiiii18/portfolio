@@ -254,20 +254,6 @@ export function World(props: WorldProps) {
   const scene = new Scene();
   scene.fog = new Fog(0xffffff, 400, 2000);
 
-    // useEffect(()=>{
-    //   const updateScreensize = () => {
-    //       setIsMobileScreenSize(window.innerWidth<768);
-    //   }
-    //   updateScreensize();
-    //   window.addEventListener("resize", updateScreensize);
-    //   return () => window.removeEventListener("resize", updateScreensize);
-    // }, []);
-
-    // const aspectRatio = containerRef.current?.clientWidth / containerRef.current?.clientHeight;
-    // // const aspectRatio = isMobileScreenSize ? 0.95 : window.innerWidth / window.innerHeight;
-    // console.log(containerRef.current?.clientWidth);
-    // console.log(containerRef.current?.clientHeight);
-
     const containerRef = useRef<HTMLDivElement | null>(null);
 
     const width = containerRef.current?.clientWidth;

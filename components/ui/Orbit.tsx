@@ -29,8 +29,7 @@ export const Orbit = ({
     <div className='flex justify-center items-center'>
     <div className='absolute -top-21 -right-13 sm:-top-19 sm:-right-8 md:-right-5 md:-top-5 md:mr-4 mx-auto h-[300px] w-[300px]'>
         {technologiesImgs.map(({id, title, imgClassName, img}, index) => {
-            // console.log(index);
-            
+
             const angle = (2 * Math.PI / technologiesImgs.length) * index;
             const x = (adjustedRadius * Math.cos(angle));
             const y = (adjustedRadius * Math.sin(angle));

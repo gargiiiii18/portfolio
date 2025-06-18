@@ -33,7 +33,6 @@ const Eevee = () => {
 
              
               <EeveeModel/>
-              {/* <ChatBubble position={[0.1, 1.8, 1.5]}/> */}
               <ChatBubble position={isMobile ? [0, 1.55, 1.5] : [0.02, 1.8, 1.5]}/>
                     
             </Suspense>

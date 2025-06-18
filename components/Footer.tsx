@@ -9,12 +9,6 @@ export const Footer = () => {
 
   return (
     <footer className='w-full py-10' id='contact'>
-      {/* <div className='w-full absolute left-0 -bottom-72 min-h-96'>
-        <img src="/footer-grid.svg" 
-        alt="grid" 
-        className='w-vw h-full opacity-50'
-        />
-      </div> */}
       <div className='flex flex-col items-center'>
           <h1 className='heading text-center font-bold text-2xl lg:text-4xl'>Connect {' '}
             <span className='text-purple-300 font-bold'>With Me</span>

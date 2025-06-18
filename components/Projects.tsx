@@ -12,8 +12,6 @@ export const Projects = () => {
       <div className='flex flex-col flex-wrap md:gap-4 md:flex-row justify-center p-4 mt-10 items-center'>
   {projects.map(({id, title, des, img, iconLists, link}) => (
     <div key={id} className='lg:min-h-[32.5rem] sm:h-[30rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]'>
-                  {/* <AnimatedPinDemo
-                  /> */}
                 <div className="h-[20rem]  w-full flex md:flex-row flex-col items-center justify-center ">
       <PinContainer
         title={link}
