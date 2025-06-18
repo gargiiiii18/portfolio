@@ -5,8 +5,12 @@ import Loader from '../components/ui/Loader';
 import EeveeModel from '@/models/EeveeModel';
 import { Bounds, OrbitControls } from '@react-three/drei';
 import { ChatBubble } from './ui/ChatBubble';
+import { isMobileHook } from '@/hooks/isMobileHook';
 
 const Eevee = () => {
+
+  const isMobile = isMobileHook();
+
   return (
     <div className='relative z-10 top-65 md:top-2 h-[400px] md:-left-3 w-100%'>
         <Canvas 
@@ -29,7 +33,8 @@ const Eevee = () => {
 
              
               <EeveeModel/>
-              <ChatBubble position={[0.5, 1.8, 1.5]}/>
+              {/* <ChatBubble position={[0.1, 1.8, 1.5]}/> */}
+              <ChatBubble position={isMobile ? [0, 1.55, 1.5] : [0.02, 1.8, 1.5]}/>
                     
             </Suspense>
         </Canvas>

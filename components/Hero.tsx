@@ -12,10 +12,8 @@ const Hero = () => {
     <div className=''>
 
       <div>
-        <Spotlight className='right-40 md:-right-6 h-[80vh] w-[50vw]' fill="purple" />
-        {/* <Spotlight className='md:-left-32 h-screen md:-top-20' fill="purple"/> */}
+        <Spotlight className='right-34 md:-right-7 h-[80vh] w-[50vw]' fill="purple" />
         <Spotlight className='top-5 md:top-30 md:left-11 h-[80vh] w-[50vw]' fill="blue" />
-        {/* <Spotlight className='top-28 left-80 h-[80vh] w-[50vw] md:-left-32 md:-top-20' fill="purple"/> */}
         <Spotlight className='top-0 md:top-5 left-2 md:left-20 right-0 h-[80vh] w-[50vw]' fill="white" />
       </div>
     
@@ -31,7 +29,6 @@ const Hero = () => {
           />
 
 
-          {/* Radial gradient for the container to give a faded look */}
           <div className="pointer-events-none inset-0 flex mt-30 md:mt-0 items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] bg-black-100" />
 
           <div className='flex justify-center relative z-10 my-12'>
