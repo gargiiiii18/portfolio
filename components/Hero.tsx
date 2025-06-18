@@ -1,9 +1,9 @@
+"use client"
 import React from 'react';
 import { cn } from "@/lib/utils";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { TextGenerateEffect } from './ui/text-generate-effect';
 import MagicButton from './ui/MagicButton';
-import { div } from 'motion/react-client';
 import { FaBeer, FaLocationArrow } from 'react-icons/fa';
 import {BentoGridDemo}from "@/components/Grid";
 import Eevee from '../components/Eevee';
