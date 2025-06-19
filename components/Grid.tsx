@@ -14,7 +14,7 @@ export function BentoGridDemo() {
           title={title}
           description={description}
           desc2={desc2}
-          img = {img}
+          img = {img ?? undefined}
           imgClassName={imgClassName}
           className={className}
         />
