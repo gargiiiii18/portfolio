@@ -12,7 +12,7 @@ const Hero = () => {
     <div className=''>
 
       <div>
-        <Spotlight className='right-34 md:-right-7 h-[80vh] w-[50vw]' fill="purple" />
+        <Spotlight className='right-34 -top-6 md:-right-7 h-[80vh] w-[50vw]' fill="purple" />
         <Spotlight className='top-5 md:top-30 md:left-11 h-[80vh] w-[50vw]' fill="blue" />
         <Spotlight className='top-0 md:top-5 left-2 md:left-20 right-0 h-[80vh] w-[50vw]' fill="white" />
       </div>

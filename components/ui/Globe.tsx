@@ -6,6 +6,8 @@ import { useThree, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "@/data/globe.json";
 import * as THREE from 'three';
+import { OrbitControls as OrbitControlsImpl } from "three-stdlib";
+
 
 declare module "@react-three/fiber" {
   interface ThreeElements {
@@ -257,11 +259,50 @@ export function World(props: WorldProps) {
     const width = containerRef.current?.clientWidth ?? 800;
     const height = containerRef.current?.clientHeight ?? 600;
     const aspect = width/height;
+
+    const controlsRef = useRef<OrbitControlsImpl | null>(null);
+
+useEffect(() => {
+  let touchStartY = 0;
+  let touchStartX = 0;
+
+  const handleTouchStart = (e: TouchEvent) => {
+    touchStartY = e.touches[0].clientY;
+    touchStartX = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    const deltaY = Math.abs(e.touches[0].clientY - touchStartY);
+    const deltaX = Math.abs(e.touches[0].clientX - touchStartX);
+
+    const isVerticalSwipe = deltaY > deltaX;
+
+    if (controlsRef.current) {
+      controlsRef.current.enabled = !isVerticalSwipe;
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (controlsRef.current) {
+      controlsRef.current.enabled = true;
+    }
+  };
+
+  window.addEventListener("touchstart", handleTouchStart, { passive: true });
+  window.addEventListener("touchmove", handleTouchMove, { passive: true });
+  window.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+  return () => {
+    window.removeEventListener("touchstart", handleTouchStart);
+    window.removeEventListener("touchmove", handleTouchMove);
+    window.removeEventListener("touchend", handleTouchEnd);
+  };
+}, []);
     
 
   return (
-    <div ref={containerRef} className="relative w-full h-full">
-    <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
+    <div ref={containerRef} className="md:relative touch-pan-y absolute -left-4 -top-30 md:-top-3 w-full h-full">
+    <Canvas className="pointer-events-auto" scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
       <WebGLRendererConfig />
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
       <directionalLight
