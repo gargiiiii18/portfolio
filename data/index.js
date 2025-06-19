@@ -3,10 +3,10 @@ const Skeleton = () => (
 );
 
 export const navItems = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Contact", link: "#contact" },
+  { name: "Home", link: "/", img: "" },
+  { name: "About", link: "#about", img: "" },
+  { name: "Projects", link: "#projects", img: "" },
+  { name: "Contact", link: "#contact", img: "" },
 ];
 
 export const technologiesImgs = [
@@ -144,26 +144,26 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "IPL Auction Simulator Game",
+    des: "IPL Auction is a website based game designed to manage and simulate an auction for IPL teams and players. It is a PERN stack project and is purely made-from-total-scratch. The project includes a PostgreSQL database, a React-based frontend, and a Node and Express backend that handles all the necessary logic and data retrieval.",
+    img: "/homepage.png",
+    iconLists: ["/re.svg", "/css.svg", "/js.svg", "/express.svg", "/postgresql.svg"],
+    link: "https://github.com/gargiiiii18/ipl-auction",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    title: "E-Commerce Website",
+    des: "An intuitive and functional E-Commerce shopping platform using Next.js where users can search for products, add them to their cart, view billing details, and checkout seamlessly.",
+    img: "/homepage1.png",
+    iconLists: ["/next.svg", "/tail.svg", "/js.svg", "/node.svg", "/mongoDB.svg"],
+    link: "https://github.com/gargiiiii18/ecommerce-shopping-website",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    title: "Plant Disease Detector",
+    des: "A web-based application that uses a Convolutional Neural Network (CNN) to identify plant diseases from leaf images. Built with Python and Streamlit, this tool is designed to assist farmers and agriculturists in early disease detection and prevention.",
+    img: "/homepage3.png",
+    iconLists: ["/streamlit.svg", "/python.svg", "/tensorflow.svg", "/keras.svg", "/colab.svg"],
     link: "https://github.com/adrianhajdin/ai_saas_app",
   },
 ];
@@ -185,7 +185,7 @@ export const socialMedia = [
   {
     id: 3,
     title: "Instagram",
-    img: "/instagram.svg",
+    img: "/insta.svg",
     link: "https://www.instagram.com/gargiiiii_18/",
   },
   {
