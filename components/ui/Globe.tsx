@@ -254,8 +254,8 @@ export function World(props: WorldProps) {
 
     const containerRef = useRef<HTMLDivElement | null>(null);
 
-    const width = containerRef.current?.clientWidth;
-    const height = containerRef.current?.clientHeight;
+    const width = containerRef.current?.clientWidth ?? 800;
+    const height = containerRef.current?.clientHeight ?? 600;
     const aspect = width/height;
     
 
