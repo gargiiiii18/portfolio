@@ -3,10 +3,10 @@ const Skeleton = () => (
 );
 
 export const navItems = [
-  { name: "Home", link: "/", img: "" },
-  { name: "About", link: "#about", img: "" },
-  { name: "Projects", link: "#projects", img: "" },
-  { name: "Contact", link: "#contact", img: "" },
+  { name: "Home", link: "/"},
+  { name: "About", link: "#about"},
+  { name: "Projects", link: "#projects"},
+  { name: "Contact", link: "#contact"},
 ];
 
 export const technologiesImgs = [
@@ -88,7 +88,7 @@ export const gridItems = [
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/grid.svg",
-    spareImg: "",
+    spareImg: null,
   },
   {
     id: 2,
@@ -98,7 +98,7 @@ export const gridItems = [
     imgClassName: "flex justify-end",
     titleClassName: "justify-start w-23",
     img: "/web-development.svg",
-    spareImg: "",
+    spareImg: null,
   },
   {
     id: 3,
@@ -108,7 +108,7 @@ export const gridItems = [
     imgClassName: "h-[155px]",
     titleClassName: "justify-center",
     img: "/grid.svg",
-    spareImg: "",
+    spareImg: null,
   },
   {
     id: 4,
@@ -116,7 +116,7 @@ export const gridItems = [
     className: "md:col-span-6 md:row-span-1",
     imgClassName: "float right",
     titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "",
+    img: null,
     spareImg: "/grid.svg",
   },
    {
@@ -127,7 +127,7 @@ export const gridItems = [
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
-    spareImg: "/b4.svg",
+    spareImg: null,
   },
   {
     id: 6,
@@ -136,7 +136,7 @@ export const gridItems = [
     className: "lg:col-span-3 md:col-span-3 md:row-span-4",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center text-black",
-    img: "",
+    img: null,
     spareImg: "/b4.svg",
   },
 ];

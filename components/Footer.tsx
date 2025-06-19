@@ -29,10 +29,10 @@ export const Footer = () => {
             <p className='text-xs md:text-base md:font-normal font-light'>Copyright © {currentYear} Eevee</p>
         </div>
         <div className='flex items-center gap-2'>{socialMedia.map((profile) => (
-           <a href={profile.link} target='_blank' rel='noopener noreferrer'>
+           <a key={profile.id} href={profile.link} target='_blank' rel='noopener noreferrer'>
           <div key={profile.id} className='w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-gray-700'>
            
-            <img src={profile.img} alt={profile.title} width={20} height={20} />
+            <img key={profile.id} src={profile.img} alt={profile.title} width={20} height={20} />
           </div>
            </a>
         ))}</div>

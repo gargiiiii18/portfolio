@@ -21,7 +21,6 @@ export const ChatBubble = ({
                 const currentChar = fullText[indexRef.current]
                 setDisplayText(prev => (prev + currentChar)); 
                 indexRef.current+=1;
-                console.log(indexRef.current);
             }
             else {
                 clearInterval(interval);
