@@ -95,7 +95,7 @@ export const gridItems = [
     title: "Full-Stack Web Developer",
     description: "I'm an aspiring",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName: "flex justify-end",
+    imgClassName: "flex justify-end w-[80px] md:w-[106px]",
     titleClassName: "justify-start w-23",
     img: "/web-development.svg",
     spareImg: null,

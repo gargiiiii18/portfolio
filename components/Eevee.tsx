@@ -24,13 +24,14 @@ const Eevee = () => {
                 <pointLight/>
                 <spotLight/>
                 <hemisphereLight/>
+                {!isMobile && 
               <OrbitControls
               enableZoom={false}
               enablePan={false}
               minPolarAngle={Math.PI/2.5}
               maxPolarAngle={Math.PI/2.5}
               />
-
+                } 
              
               <EeveeModel/>
               <ChatBubble position={isMobile ? [0, 1.55, 1.5] : [0.02, 1.8, 1.5]}/>
