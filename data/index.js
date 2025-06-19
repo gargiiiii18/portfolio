@@ -164,7 +164,7 @@ export const projects = [
     des: "A web-based application that uses a Convolutional Neural Network (CNN) to identify plant diseases from leaf images. Built with Python and Streamlit, this tool is designed to assist farmers and agriculturists in early disease detection and prevention.",
     img: "/homepage3.png",
     iconLists: ["/streamlit.svg", "/python.svg", "/tensorflow.svg", "/keras.svg", "/colab.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    link: "https://github.com/gargiiiii18/plant-disease-prediction-system",
   },
 ];
 
