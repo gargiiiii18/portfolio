@@ -53,7 +53,7 @@ const Eevee = () => {
   }, []);
 
   return (
-    <div className='touch-pan-y relative overflow-hidden -left-2 top-65 md:top-2 h-[400px] md:-left-3 w-100%'>
+    <div className='touch-pan-y relative z-0 overflow-hidden -left-2 top-65 md:top-2 h-[400px] md:-left-3 w-100%'>
         <Canvas 
         className='bg-transparent pointer-events-auto'
         camera={{
@@ -65,14 +65,14 @@ const Eevee = () => {
                 <pointLight/>
                 <spotLight/>
                 <hemisphereLight/>
-                {!isMobile && 
+                {/* {!isMobile &&  */}
               <OrbitControls
               enableZoom={false}
               enablePan={false}
               minPolarAngle={Math.PI/2.5}
               maxPolarAngle={Math.PI/2.5}
               />
-                } 
+                {/* }  */}
              
               <EeveeModel/>
               <ChatBubble position={isMobile ? [0, 1.55, 1.5] : [0.02, 1.8, 1.5]}/>
