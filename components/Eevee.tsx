@@ -3,7 +3,7 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import Loader from '../components/ui/Loader';
 import EeveeModel from '@/models/EeveeModel';
-import { Bounds, OrbitControls } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import { ChatBubble } from './ui/ChatBubble';
 import { isMobileHook } from '@/hooks/isMobileHook';
 

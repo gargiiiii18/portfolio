@@ -1,7 +1,5 @@
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/Floating-navbar";
-import { FaHome } from "react-icons/fa";
-import {BentoGridDemo}from "@/components/Grid";
 import { GlobeDemo } from "@/components/GridGlobe";
 import { Footer } from "@/components/Footer";
 import { Projects } from "@/components/Projects";

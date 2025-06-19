@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
-import { Billboard, OrbitControls, Text, RoundedBox } from '@react-three/drei';
+import { Billboard, OrbitControls, Text } from '@react-three/drei';
 import "@fontsource/ibm-plex-mono";
 import { isMobileHook } from '@/hooks/isMobileHook';
 

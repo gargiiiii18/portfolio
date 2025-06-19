@@ -2,21 +2,12 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/Bento-grid";
 import {gridItems} from "../data/index";
-import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
 
 export function BentoGridDemo() {
   
   return (
     <BentoGrid className="max-w-4xl h-full mx-auto z-20">
-      {gridItems.map(({title, description, img, id, className, spareImg, imgClassName, desc2, titleClassName}, i) => (
+      {gridItems.map(({title, description, img, id, className, imgClassName, desc2}, i) => (
         
         <BentoGridItem
           id={id}

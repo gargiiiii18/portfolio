@@ -3,10 +3,6 @@ import {technologiesImgs } from '@/data/index';
 import { cn } from "@/lib/utils";
 
 export const Technologies = ({
-    id,
-    title,
-    img,
-    imgClassName
 } : {
      id?: number;
      title?: string;

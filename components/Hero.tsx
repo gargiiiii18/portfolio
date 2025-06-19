@@ -37,7 +37,7 @@ const Hero = () => {
                 words='Hello Earth'
                 duration={1}
               />
-              <p className='mx-2 text-md md:text-xl'>I'm a Full-Stack Web Developer</p>
+              <p className='mx-2 text-md md:text-xl'>I&apos;m a Full-Stack Web Developer</p>
 
               <a className='' href="#projects">
                 <MagicButton

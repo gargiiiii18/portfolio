@@ -1,8 +1,6 @@
 "use client";
 import { technologiesImgs } from '@/data/index';
-import { div } from 'framer-motion/client';
-import React, { useState, useEffect } from 'react'
-import { SourceTextModule } from 'vm';
+import React from 'react'
 import { isMobileHook } from '@/hooks/isMobileHook';
 
 type icons = {
@@ -28,7 +26,7 @@ export const Orbit = ({
   return (
     <div className='flex justify-center items-center'>
     <div className='absolute -top-21 -right-13 sm:-top-19 sm:-right-8 md:-right-5 md:-top-5 md:mr-4 mx-auto h-[300px] w-[300px]'>
-        {technologiesImgs.map(({id, title, imgClassName, img}, index) => {
+        {technologiesImgs.map(({id, title, img}, index) => {
 
             const angle = (2 * Math.PI / technologiesImgs.length) * index;
             const x = (adjustedRadius * Math.cos(angle));

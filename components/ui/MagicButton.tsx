@@ -1,7 +1,6 @@
 import React from 'react'
-import { FaBeer, FaLocationArrow } from 'react-icons/fa'
 const MagicButton = ({title, icon, position, handleClick, otherClasses}:{
-    title: String, icon: React.ReactNode, position: String, handleClick?:()=>void, otherClasses?: String
+    title: string, icon: React.ReactNode, position: string, handleClick?:()=>void, otherClasses?: string
 }) => {
   return (
     <button onClick={handleClick} className="my-4 w-40 mt-7 md:w-60 md:mt-13 relative inline-flex md:h-12 h-10 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
