@@ -14,7 +14,7 @@ const Eevee = () => {
   return (
     <div className='touch-pan-y relative z-10 top-65 md:top-2 h-[400px] md:-left-3 w-100%'>
         <Canvas 
-        className='bg-transparent z-10'
+        className='bg-transparent z-0 md:z-10'
         camera={{
           position: [0, 1.5, 5], fov: 45}}
         >
