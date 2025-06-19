@@ -23,8 +23,11 @@ export const Footer = () => {
               />
             </a>
       </div>
-      <div className='flex mt-16  md:gap-3 gap-6 md:flex-row flex-col justify-between items-center'>
-        <p className='text-xs md:text-base md:font-normal font-light'>Copyright © {currentYear} Eevee</p>
+      <div className='flex mt-16 md:gap-3 gap-6 md:flex-row flex-col justify-between items-center text-center'>
+        <div className='flex pr-7 justify-center items-center'>
+            <img src="/eevee_logo.png" className="h-25" alt="Logo"/>
+            <p className='text-xs md:text-base md:font-normal font-light'>Copyright © {currentYear} Eevee</p>
+        </div>
         <div className='flex items-center gap-2'>{socialMedia.map((profile) => (
            <a href={profile.link} target='_blank' rel='noopener noreferrer'>
           <div key={profile.id} className='w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-gray-700'>

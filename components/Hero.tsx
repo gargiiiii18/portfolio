@@ -16,10 +16,9 @@ const Hero = () => {
         <Spotlight className='top-5 md:top-30 md:left-11 h-[80vh] w-[50vw]' fill="blue" />
         <Spotlight className='top-0 md:top-5 left-2 md:left-20 right-0 h-[80vh] w-[50vw]' fill="white" />
       </div>
-    
       <div>
-
-        <div className="md:top-0 top-50 md:left-0 flex flex-col justify-center overflow-hidden md:flex-row h-dvh w-screen items-center bg-black-100">
+        <div className="md:top-0 top-50 md:left-0 flex flex-col justify-center overflow-hidden md:flex-row h-dvh    w-screen items-center bg-black-100">
+          
           <div
             className={cn(
               "[background-size:20px_20px]",
@@ -27,7 +26,6 @@ const Hero = () => {
               "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
             )}
           />
-
 
           <div className="pointer-events-none inset-0 flex mt-30 md:mt-0 items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] bg-black-100" />
 
@@ -52,7 +50,7 @@ const Hero = () => {
           </div>
           <div className='relative -top-65 left-2 md:left-0 md:top-0'>
             <Eevee />
-          </div>
+        </div>
          
         </div>
         <div id='about'>
