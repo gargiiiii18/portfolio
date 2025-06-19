@@ -8,12 +8,14 @@ import {
 } from "motion/react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { nav } from "framer-motion/client";
 
 export const FloatingNav = ({
   navItems,
   className,
 }: {
   navItems: {
+    img?: string,
     name: string;
     link: string;
     icon?: JSX.Element;
@@ -60,6 +62,7 @@ export const FloatingNav = ({
         )}
       >
         {navItems.map((navItem: any, idx: number) => (
+          <nav>
           <Link
             key={`link=${idx}`}
             href={navItem.link}
@@ -70,6 +73,7 @@ export const FloatingNav = ({
             <span className="block">{navItem.icon}</span>
             <span className="sm:block md:text-sm text-xs">{navItem.name}</span>
           </Link>
+          </nav>
         ))}
       
       </motion.div>
