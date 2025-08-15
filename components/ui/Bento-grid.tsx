@@ -5,7 +5,7 @@ import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 import { useEffect, useState } from "react";
 import MagicButton from "./MagicButton";
-import { IoCopyOutline } from "react-icons/io5";
+import { IoCopyOutline, IoSearchSharp  } from "react-icons/io5";
 import { TechStack } from "./TechStack";
 import { Orbit } from "./Orbit";
 import { Snake } from "./Snake";
@@ -53,7 +53,7 @@ export const BentoGridItem = ({
   titleClassName?: string;
 }) => {
 
-  const [copied, setCopied] = useState(false);
+  const [viewed, setViewed] = useState(false);
   const[isMobile, setIsMobile] = useState(false);
 
     useEffect(()=>{
@@ -68,8 +68,9 @@ export const BentoGridItem = ({
 
 
         const handleCopy = () => {
-        navigator.clipboard.writeText('codereevee@gmail.com');
-        setCopied(true);
+        // navigator.clipboard.writeText('codereevee@gmail.com');
+         window.open("https://drive.google.com/file/d/1Kmo5l0ja2X2RVR_U8yJTpojy_692pfGy/view?usp=sharing", "_blank") 
+        setViewed(true);
       }
 
 
@@ -140,8 +141,8 @@ export const BentoGridItem = ({
                <div className="md:top-40 top-15 absolute">
                 <div className={`absolute z-20 -bottom-5`}>
                     <Lottie options={{
-                      loop: copied,
-                      autoplay: copied,
+                      loop: viewed,
+                      autoplay: viewed,
                       animationData,
                       rendererSettings: {
                       preserveAspectRatio: 'xMidYMid slice'
@@ -150,12 +151,12 @@ export const BentoGridItem = ({
                 
                 </div>
                 {!isMobile && 
-                    <img className="absolute z-20 -top-15 -right-26 md:-top-15 md:left-20" src="/icons8-email-70.png" alt="mail" />
+                    <img className="absolute z-20 h-20 -top-15 -right-26 md:-top-15 md:left-20" src="/resume.png" alt="mail" />
                 }
                 <MagicButton
                   otherClasses="z-20"
-                  title={copied ? "Email Copied!" : "Copy my Email"}
-                  icon={<IoCopyOutline/>}
+                  title="View"
+                  icon={<IoSearchSharp/>}
                   position="left"
                   handleClick={handleCopy}
                 />
