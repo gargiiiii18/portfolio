@@ -15,8 +15,6 @@ export default function Home() {
         <GlobeDemo/>
         </div>
         <div className="z-10 flex flex-col justify-center items-center gap-0">
-    
-      
       <Hero/>
         </div>
       <Projects/>  

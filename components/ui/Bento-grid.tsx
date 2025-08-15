@@ -5,7 +5,7 @@ import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 import { useEffect, useState } from "react";
 import MagicButton from "./MagicButton";
-import { IoCopyOutline, IoSearchSharp  } from "react-icons/io5";
+import { IoSearchSharp  } from "react-icons/io5";
 import { TechStack } from "./TechStack";
 import { Orbit } from "./Orbit";
 import { Snake } from "./Snake";
