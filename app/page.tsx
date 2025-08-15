@@ -18,9 +18,7 @@ export default function Home() {
     
       
       <Hero/>
-      {/* <BentoGridDemo/> */}
         </div>
-        {/* <DraggableCardDemo/> */}
       <Projects/>  
       </div>
       <Footer/>
