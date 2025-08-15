@@ -4,7 +4,6 @@ import { GlobeDemo } from "@/components/GridGlobe";
 import { Footer } from "@/components/Footer";
 import { Projects } from "@/components/Projects";
 import { navItems } from "@/data";
-import { DraggableCardDemo } from "@/components/TechStack1";
 export default function Home() {
   return (
     <main className="relative h-full overflow-clip bg-black-100 mx-auto flex flex-col justify-center items-center sm:px-10 px-5">
